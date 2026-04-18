@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Izel-Data | Historial y Tendencias</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#ffb1c3",
+              "tertiary-fixed-dim": "#8fd1da",
+              "surface": "#f4faff",
+              "on-tertiary-fixed": "#001f23",
+              "secondary-fixed-dim": "#b4cad6",
+              "on-primary-fixed-variant": "#8f0042",
+              "secondary-container": "#cfe6f3",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#cfe6f3",
+              "outline-variant": "#e3bdc4",
+              "primary-container": "#d90368",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "surface-container-low": "#e7f6ff",
+              "secondary": "#4c616c",
+              "on-secondary-container": "#526772",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#004f56",
+              "background": "#f4faff",
+              "outline": "#8f6f75",
+              "on-secondary-fixed": "#071e27",
+              "on-secondary-fixed-variant": "#354a54",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#e1f4ff",
+              "on-primary-fixed": "#3f0019",
+              "on-surface-variant": "#5b3f45",
+              "on-background": "#071e27",
+              "surface-container": "#dbf1fe",
+              "primary-fixed": "#ffd9e0",
+              "tertiary-fixed": "#abeef7",
+              "on-tertiary-container": "#d4faff",
+              "surface-tint": "#bb0058",
+              "tertiary": "#125f67",
+              "surface-variant": "#cfe6f3",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#d5ecf9",
+              "inverse-surface": "#1e333d",
+              "tertiary-container": "#347880",
+              "primary-fixed-dim": "#ffb1c3",
+              "surface-dim": "#c7ddea",
+              "secondary-fixed": "#cfe6f3",
+              "on-surface": "#071e27",
+              "primary": "#ac0051",
+              "on-primary-container": "#ffeff1",
+              "surface-bright": "#f4faff",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chart-gradient {
+            background: linear-gradient(180deg, rgba(172, 0, 81, 0.1) 0%, rgba(244, 250, 255, 0) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 py-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#ac0051] dark:text-[#d90368] text-2xl" data-icon="bubble_chart">bubble_chart</span>
+<h1 class="text-xl font-black text-[#071e27] dark:text-slate-100 font-headline tracking-tight">Izel-Data</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-surface-container">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Close up of a professional woman profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxefV6fPss2xsn3HpfNzvnLrX2nx8tGVdjfKib0ICtFWvZFgLEwsjcdUmRP7-6PA4jtMGhXLPe5HcXSt4UuRQitkTtIPp9xEJrwSGFVgIqWa1SLWpZLUUNyqyb5Ql7U0-dfdCkdrAGbBN2781K-Sx1LkUgJ65PoeJtuVYa3zG624G-Auz4-B5d0ctSnaAOmSRRd0UpFzTlURX7wYo3wvzNCAhWZ-nc0-VykuluJ9rFm9z3akfLtOrjcxiXaMY-sB5UZEf3PAwk100"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto space-y-8">
+<!-- Hero Section: Historical Overview -->
+<section>
+<h2 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface mb-2">Historial y Tendencias</h2>
+<p class="text-secondary font-medium text-sm">Análisis detallado de tu salud hormonal en los últimos 90 días.</p>
+</section>
+<!-- Metric Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_rgba(7,30,39,0.04)] border border-outline-variant/10">
+<span class="text-secondary text-xs font-bold uppercase tracking-wider mb-2 block">Ciclo Promedio</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-black text-primary">28</span>
+<span class="text-secondary font-semibold text-sm">días</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_rgba(7,30,39,0.04)] border border-outline-variant/10">
+<span class="text-secondary text-xs font-bold uppercase tracking-wider mb-2 block">Pico de Intensidad</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-black text-tertiary">Fase Lútea</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_rgba(7,30,39,0.04)] border border-outline-variant/10">
+<span class="text-secondary text-xs font-bold uppercase tracking-wider mb-2 block">Regularidad</span>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-black text-primary">94%</span>
+</div>
+</div>
+</div>
+<!-- Line Chart: Intensity of Symptoms (3 Months) -->
+<section class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_rgba(7,30,39,0.04)] overflow-hidden">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface">Intensidad de Síntomas</h3>
+<p class="text-secondary text-xs font-medium">Últimos 3 meses (Marzo - Mayo)</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="show_chart">show_chart</span>
+</div>
+<div class="relative h-48 w-full flex items-end justify-between gap-1 group">
+<!-- Visual Chart Representation using stylized divs -->
+<div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+<div class="w-full h-full border-b border-secondary/20 flex flex-col justify-between">
+<div class="w-full border-t border-secondary/10"></div>
+<div class="w-full border-t border-secondary/10"></div>
+<div class="w-full border-t border-secondary/10"></div>
+</div>
+</div>
+<!-- Simulated data points for 3 months -->
+<div class="flex-1 h-full flex items-end relative">
+<svg class="w-full h-full preserve-3d" viewbox="0 0 400 100">
+<path d="M0,80 Q50,20 100,50 T200,30 T300,70 T400,20" fill="none" stroke="#ac0051" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0,80 Q50,20 100,50 T200,30 T300,70 T400,20 V100 H0 Z" fill="url(#grad1)" opacity="0.1"></path>
+<defs>
+<lineargradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#ac0051;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<!-- Dots -->
+<circle cx="50" cy="22" fill="#ac0051" r="4"></circle>
+<circle cx="200" cy="30" fill="#ac0051" r="4"></circle>
+<circle cx="400" cy="20" fill="#ac0051" r="4"></circle>
+</svg>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-secondary uppercase tracking-tighter">
+<span>Marzo</span>
+<span>Abril</span>
+<span>Mayo</span>
+</div>
+</section>
+<!-- Bar Chart: Most Frequent Symptoms -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_rgba(7,30,39,0.04)]">
+<h3 class="font-headline font-bold text-lg text-on-surface mb-6">Síntomas Frecuentes</h3>
+<div class="space-y-4">
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span>Fatiga</span>
+<span class="text-primary">82%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full">
+<div class="h-full bg-primary rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span>Cefalea</span>
+<span class="text-tertiary">65%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full">
+<div class="h-full bg-tertiary rounded-full" style="width: 65%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-semibold mb-1">
+<span>Hinchazón</span>
+<span class="text-secondary">40%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full">
+<div class="h-full bg-secondary rounded-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Prediction Section: Predicción a 3 meses -->
+<div class="bg-primary/5 p-6 rounded-xl border border-primary/10 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline font-bold text-lg text-primary">Predicción a 3 meses</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="calendar_today">calendar_today</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Próximo Periodo</p>
+<p class="text-xs text-secondary">Estimado: 12 de Junio (+/- 1 día)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="trending_down">trending_down</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Evolución de Síntomas</p>
+<p class="text-xs text-secondary">Se prevé una reducción del 15% en fatiga gracias a tu patrón actual.</p>
+</div>
+</div>
+</div>
+<button class="mt-6 w-full py-3 bg-primary text-on-primary rounded-full text-xs font-bold tracking-wide uppercase hover:opacity-90 transition-opacity">
+                        Ver Calendario Completo
+                    </button>
+</div>
+</div>
+</section>
+<!-- Insights Summary List -->
+<section class="space-y-4">
+<h4 class="font-headline font-bold text-md text-secondary">Recomendaciones del Mes</h4>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 group hover:bg-surface-container transition-colors">
+<img alt="Yoga" class="w-12 h-12 rounded-lg object-cover" data-alt="Calm woman doing yoga stretching exercises" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCerGlfNw7Lgl3-vCclrGsvfAhJylK4laZ3Vxy0e7KdNZjgXYInE8TC1wmeKBHfkHHfM677CIse798P7oQ8yt0IDoxSkLn2xBTsQcyQK4D-T8t7Emf-a-kJGxUil05ItC4ZEnzlitFpQugFOB8Ad1SuOhcOmD3MlkPlnH0DM3JTErgzzYMG8__wNZ3tNvzgulghtg8TTUPTbluR4YZictlBt2qi9bztABYWZ20gzT88Qu6dUGkdVe5OXP28Ie6FwFYegzcEDRmRmYA"/>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface">Reduce la intensidad en Fase Lútea</p>
+<p class="text-xs text-secondary">Tu historial muestra picos de cortisol elevados en este periodo.</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 group hover:bg-surface-container transition-colors">
+<img alt="Nutrition" class="w-12 h-12 rounded-lg object-cover" data-alt="Plate with healthy green salad and vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsQhdZKubpUhTOcPT-TdNMDO-SwTDJr0ksz33Plu-gl5R017uFtqq5DkYzdmDLLsgB50TLtN4_imzgZhR6fXh3pQh2lLzpvLRJ6WdqR9qhyqMeKv5fZZa-UQ9cqy2Ot4-kWiQT0arpCKAkrEEcmiQq-3U0v6gz6QGBxY6i5ud1aZJNz8B-cqlBHHI0mcF9YoRFVIpJ523mTjKjJ7c53P_71mgVJFDUWf9SKajxp5XzjRNWc8M9VZ1brwe01a80hB5lP_5hGKuWa18"/>
+<div class="flex-1">
+<p class="text-sm font-bold text-on-surface">Aumenta ingesta de Magnesio</p>
+<p class="text-xs text-secondary">Para ayudar con los dolores de cabeza recurrentes reportados.</p>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-t border-[#e3bdc4]/20 shadow-[0_-4px_24px_rgba(7,30,39,0.04)] rounded-t-[2rem]">
+<!-- Home -->
+<button class="flex flex-col items-center justify-center text-[#4c616c] dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors p-2 px-4 scale-90 active:duration-150">
+<span class="material-symbols-outlined text-xl" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Home</span>
+</button>
+<!-- Historial (Active) -->
+<button class="flex flex-col items-center justify-center text-[#ac0051] dark:text-[#d90368] bg-[#d90368]/10 rounded-full px-4 py-1 scale-90 active:duration-150">
+<span class="material-symbols-outlined text-xl" data-icon="calendar_month" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Historial</span>
+</button>
+<!-- Síntomas -->
+<button class="flex flex-col items-center justify-center text-[#4c616c] dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors p-2 px-4 scale-90 active:duration-150">
+<span class="material-symbols-outlined text-xl" data-icon="monitor_heart">monitor_heart</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Síntomas</span>
+</button>
+<!-- Análisis -->
+<button class="flex flex-col items-center justify-center text-[#4c616c] dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors p-2 px-4 scale-90 active:duration-150">
+<span class="material-symbols-outlined text-xl" data-icon="insights">insights</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Análisis</span>
+</button>
+</nav>
+</body></html>

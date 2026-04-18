@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#ffb1c3",
+              "tertiary-fixed-dim": "#8fd1da",
+              "surface": "#f4faff",
+              "on-tertiary-fixed": "#001f23",
+              "secondary-fixed-dim": "#b4cad6",
+              "on-primary-fixed-variant": "#8f0042",
+              "secondary-container": "#cfe6f3",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#cfe6f3",
+              "outline-variant": "#e3bdc4",
+              "primary-container": "#d90368",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "surface-container-low": "#e7f6ff",
+              "secondary": "#4c616c",
+              "on-secondary-container": "#526772",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#004f56",
+              "background": "#f4faff",
+              "outline": "#8f6f75",
+              "on-secondary-fixed": "#071e27",
+              "on-secondary-fixed-variant": "#354a54",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#e1f4ff",
+              "on-primary-fixed": "#3f0019",
+              "on-surface-variant": "#5b3f45",
+              "on-background": "#071e27",
+              "surface-container": "#dbf1fe",
+              "primary-fixed": "#ffd9e0",
+              "tertiary-fixed": "#abeef7",
+              "on-tertiary-container": "#d4faff",
+              "surface-tint": "#bb0058",
+              "tertiary": "#125f67",
+              "surface-variant": "#cfe6f3",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#d5ecf9",
+              "inverse-surface": "#1e333d",
+              "tertiary-container": "#347880",
+              "primary-fixed-dim": "#ffb1c3",
+              "surface-dim": "#c7ddea",
+              "secondary-fixed": "#cfe6f3",
+              "on-surface": "#071e27",
+              "primary": "#ac0051",
+              "on-primary-container": "#ffeff1",
+              "surface-bright": "#f4faff",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-6 py-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#ac0051] dark:text-[#d90368] text-2xl" data-icon="bubble_chart" style="">bubble_chart</span>
+<h1 class="text-xl font-black text-[#071e27] dark:text-slate-100 font-headline tracking-tight" style="">Izel-Data</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden hover:opacity-80 transition-opacity cursor-pointer">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Female clinical researcher professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQLF8hJjAVtR6GRaCWkLhBdzRQ-pmv1JRB8Tff1X-L7JOj72YL0bIihqPuag16bBou5C2dtMGjH75Edyr7V6ck2HvGSEWBxHwPGY-oVl3rfxfoYjv9t4PABqxvcePf5gQc_NkFk0q3JOfkigWpLhVjPhNZJqh7_pgwmAJ4DXSgbjOAJUAnj2eYTMc8gYomjSxM0XKcUAcfy8AxgjMf34hdxQoDPTl4wHK1DIsJaI7nzzFo7_lYFi-d9x56TIFp0j4wDdwXj7wU_ic" style=""/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-10">
+<div class="flex flex-col gap-1">
+<span class="text-primary font-bold tracking-widest text-[10px] uppercase font-label" style="">Análisis Predictivo</span>
+<h2 class="text-4xl font-headline font-extrabold tracking-tight text-on-background leading-tight" style="">
+                    Screening de Riesgo Preventivo
+                </h2>
+</div>
+<p class="mt-4 text-secondary leading-relaxed max-w-[90%]" style="">
+                Algoritmos de IA analizando patrones clínicos para detección temprana.
+            </p>
+</section>
+<!-- Bento Grid Analysis -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<!-- Tarjeta 1: Endometriosis -->
+<div class="bg-surface-container-lowest p-6 rounded-[2rem] border border-outline-variant/10 shadow-[0_12px_32px_rgba(7,30,39,0.04)] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-primary/10 rounded-2xl">
+<span class="material-symbols-outlined text-primary" data-icon="menstrual_health" style="">menstrual_health</span>
+</div>
+<span class="text-[10px] font-bold bg-primary-container text-on-primary-container px-3 py-1 rounded-full uppercase tracking-tighter" style="">Riesgo Alto</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-1" style="">Endometriosis</h3>
+<p class="text-secondary text-sm mb-6" style="">Basado en dismenorrea recurrente</p>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="text-4xl font-headline font-black text-primary tracking-tighter" style="">78%</span>
+<span class="text-xs font-label text-secondary mb-1" style="">Probabilidad</span>
+</div>
+<div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-[78%]"></div>
+</div>
+</div>
+</div>
+<!-- Tarjeta 2: SOP -->
+<div class="bg-surface-container-lowest p-6 rounded-[2rem] border border-outline-variant/10 shadow-[0_12px_32px_rgba(7,30,39,0.04)] flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-tertiary/10 rounded-2xl">
+<span class="material-symbols-outlined text-tertiary" data-icon="vital_signs" style="">vital_signs</span>
+</div>
+<span class="text-[10px] font-bold bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full uppercase tracking-tighter" style="">Moderado</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-1" style="">SOP</h3>
+<p class="text-secondary text-sm mb-6" style="">Síndrome de Ovario Poliquístico</p>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-4xl font-headline font-black text-on-surface tracking-tighter" style="">32%</span>
+<div class="text-right">
+<span class="block text-[10px] font-bold text-secondary uppercase" style="">Confianza</span>
+<span class="text-xs font-label text-tertiary" style="">94.2 Score</span>
+</div>
+</div>
+<div class="flex gap-1 h-1.5">
+<div class="flex-1 bg-tertiary rounded-full"></div>
+<div class="flex-1 bg-tertiary rounded-full"></div>
+<div class="flex-1 bg-surface-container-high rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Justificación del modelo -->
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-t border-[#e3bdc4]/20 shadow-[0_-4px_24px_rgba(7,30,39,0.04)] rounded-t-[2rem]">
+<a class="flex flex-col items-center justify-center text-[#4c616c] dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors p-2" href="#" style="">
+<span class="material-symbols-outlined mb-1" data-icon="home" style="">home</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide" style="">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4c616c] dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors p-2" href="#" style="">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_month" style="">calendar_month</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide" style="">Historial</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4c616c] dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors p-2" href="#" style="">
+<span class="material-symbols-outlined mb-1" data-icon="monitor_heart" style="">monitor_heart</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide" style="">Síntomas</span>
+</a>
+<!-- Active Tab: Análisis -->
+<a class="flex flex-col items-center justify-center text-[#ac0051] dark:text-[#d90368] bg-[#d90368]/10 rounded-full px-4 py-1" href="#" style="">
+<span class="material-symbols-outlined mb-1" data-icon="insights" style='font-variation-settings: "FILL" 1;'>insights</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide" style="">Análisis</span>
+</a>
+</nav>
+</body></html>

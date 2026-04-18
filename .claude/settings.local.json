@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:stitch.withgoogle.com)",
+      "Bash(claude mcp *)",
+      "mcp__stitch__get_screen",
+      "WebFetch(domain:contribution.usercontent.google.com)",
+      "Bash(mkdir -p \"/Users/mpreciad/Desktop/Isaac/Especialidad/Dirección de proyectos/izel/stitch_screens/fecha_nacimiento\")",
+      "Bash(curl -s -L \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzFhY2M1NDAzYmNhMDQwYzY5NzYyYmJhMTU5NTUwYTNhEgsSBxCNxoKyyg4YAZIBIwoKcHJvamVjdF9pZBIVQhMxNTY4OTEzNzkxMDY4NTE3NzE0&filename=&opi=89354086\" -o \"/Users/mpreciad/Desktop/Isaac/Especialidad/Dirección de proyectos/izel/stitch_screens/fecha_nacimiento/screen.html\")",
+      "Bash(curl -s -L \"https://lh3.googleusercontent.com/aida/ADBb0ujcQ8woHz0d5iqn0Uk69gAh9O2oib3epahj8iPJKnv3foB92HZI3Q2RU2sD4iWNVfTpdu8RWeti2bJJF3EDZg_LQGrnyyr6EFlQx7OzqiVf-RjAvvKJcdlmna-D8OYDara_yqBdGc6TpqtzxNn0pnndPkNhmQ8QMS8PMssYCBj_lws2owkV26iOomjCEhZR0icKsM6HT9V6Xa8-wHA2TwwP1IkAhGsVAIDLT486flUwczQ0ZC0n2XnRLA\" -o \"/Users/mpreciad/Desktop/Isaac/Especialidad/Dirección de proyectos/izel/stitch_screens/fecha_nacimiento/screenshot.png\")",
+      "mcp__stitch__list_screens",
+      "Bash(grep -oE \"Síntomas [A-ZÁÉÍÓÚ][a-záéíóú]+|rounded-full[^>]*>[A-Z][^<]{2,30}<\" \"/Users/mpreciad/Desktop/Isaac/Especialidad/Dirección de proyectos/izel/stitch_screens/registro_sintomas/screen.html\")",
+      "Bash(python3 -c ' *)",
+      "Bash(pip3 list *)",
+      "Bash(curl -s http://localhost:8000/health)",
+      "Bash(curl -s -X POST http://localhost:8000/predict/endometriosis -H \"Content-Type: application/json\" -d '{\"age\":29,\"menstrual_irregularity\":1,\"chronic_pain_level\":3,\"hormone_level_abnormality\":0,\"infertility\":0,\"bmi\":23.4}')",
+      "Bash(curl -s -X POST http://localhost:8000/predict/sop -H \"Content-Type: application/json\" -d '{\"age\":29,\"weight_kg\":62,\"height_cm\":163,\"bmi\":23.3,\"cycle_irregular\":1,\"cycle_length_days\":32,\"pregnant\":0,\"abortions\":0,\"weight_gain\":1,\"hair_growth\":1,\"skin_darkening\":0,\"hair_loss\":1,\"pimples\":1}')"
+    ]
+  }
+}

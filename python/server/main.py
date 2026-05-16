@@ -14,7 +14,6 @@ from predictor import ModelNotLoaded, predictor
 
 app = FastAPI(title="Izel-Data Prediction API", version="1.0.0")
 
-# El simulador iOS y dispositivos físicos pegarán directo: abrimos CORS.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

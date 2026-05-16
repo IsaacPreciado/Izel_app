@@ -11,8 +11,16 @@ final class AnalysisViewModel {
 
     var indicators: [RiskIndicator] = RiskIndicator.placeholders
     var state: LoadState = .idle
+    var loadingMessage: String = ""
 
     private let service: PredictionService
+
+    private let loadingMessages = [
+        "Analizando datos...",
+        "Preparando características...",
+        "Haciendo predicción...",
+        "Evaluando resultados..."
+    ]
 
     init(service: PredictionService = PredictionService()) {
         self.service = service
@@ -60,12 +68,25 @@ final class AnalysisViewModel {
         }
 
         state = .loading
+        loadingMessage = loadingMessages[0]
+
+        let messageTask = Task { @MainActor in
+            for i in 1... {
+                try await Task.sleep(for: .seconds(1))
+                guard self.state == .loading else { break }
+                self.loadingMessage = self.loadingMessages[i % self.loadingMessages.count]
+            }
+        }
+
+        let minDelay = Task { try? await Task.sleep(for: .seconds(3)) }
 
         async let endoTask = service.predictEndometriosis(profile: profile, entries: entries)
         async let sopTask  = service.predictSOP(profile: profile, entries: entries)
 
         do {
             let (endo, sop) = try await (endoTask, sopTask)
+            await minDelay.value
+            messageTask.cancel()
             indicators = [
                 Self.makeIndicator(id: "endometriosis", title: "Endometriosis",
                                    level: endo.asRiskLevel, score: endo.probability,
@@ -76,6 +97,8 @@ final class AnalysisViewModel {
             ]
             state = .success
         } catch {
+            await minDelay.value
+            messageTask.cancel()
             // Degradación: si el servidor falla, caemos al cálculo local.
             refreshLocal(with: entries, profile: profile)
             state = .failure((error as? PredictionError)?.errorDescription

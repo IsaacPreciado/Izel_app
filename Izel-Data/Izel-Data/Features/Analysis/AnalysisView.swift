@@ -20,6 +20,7 @@ struct AnalysisView: View {
                     RiskIndicatorCard(indicator: indicator)
                 }
 
+
                 analyzeButton
 
                 if case .failure(let message) = viewModel.state {
@@ -30,6 +31,7 @@ struct AnalysisView: View {
             .padding(.vertical, Theme.Spacing.xl)
         }
         .background(Theme.Colors.background.ignoresSafeArea())
+        .animation(.easeInOut(duration: 0.3), value: viewModel.state == .loading)
         .onAppear { pingServer() }
     }
 
@@ -98,15 +100,28 @@ struct AnalysisView: View {
             }
         } label: {
             HStack(spacing: Theme.Spacing.sm) {
-                if viewModel.state == .loading {
+                /*if viewModel.state == .loading {
                     ProgressView()
                         .progressViewStyle(.circular)
                         .tint(.white)
                 } else {
                     Image(systemName: "sparkles")
-                }
-                Text(viewModel.state == .loading ? "Analizando…" : "Analizar con IA")
-                    .font(Theme.Typography.headline(15, weight: .bold))
+                }*/
+                 if viewModel.state == .loading {
+                     HStack(spacing: Theme.Spacing.sm) {
+                         ProgressView()
+                             .progressViewStyle(.circular)
+                             .scaleEffect(0.8)
+                         Text(viewModel.loadingMessage)
+                             .font(Theme.Typography.headline(15, weight: .bold))
+                     }
+                     .frame(maxWidth: .infinity)
+                     .transition(.opacity.combined(with: .move(edge: .bottom)))
+                 }else{
+                     Text("Analizar con IA")
+                         .font(Theme.Typography.headline(15, weight: .bold))
+                 }
+
             }
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
